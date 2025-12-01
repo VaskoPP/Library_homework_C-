@@ -45,10 +45,9 @@ g++ -std=c++17 -Wall -Wextra Author.cpp Book.cpp Member.cpp Loan.cpp Library.cpp
 
 ##  Примерен изход
 
-```
+
 <img width="504" height="132" alt="Screenshot 2025-12-01 at 21 37 23" src="https://github.com/user-attachments/assets/97026c0b-9945-4acc-9adc-b48a7afc3916" />
 
-```
 
 
 ## Класове
