@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <stdexcept>
 using namespace std;
 
 class Author {
@@ -7,14 +8,25 @@ class Author {
     int birthYear;
 
 public:
-    Author();
-    Author(const string& name, int birthYear);
+    Author() : name("Unknown"), birthYear(1900) {}
+
+    Author(const string& n, int y)
+        : name(n), birthYear(y)
+    {
+        if (y < 1850 || y > 2025)
+            throw invalid_argument("Invalid birth year");
+    }
 
     const string& getName() const { return name; }
     int getBirthYear() const { return birthYear; }
 
-    void setBirthYear(int y);
+    void setBirthYear(int y) {
+        if (y < 1850 || y > 2025)
+            throw invalid_argument("Invalid birth year");
+        birthYear = y;
+    }
 
-    string to_string() const;
+    string to_string() const {
+        return name + " (" + std::to_string(birthYear) + ")";
+    }
 };
-

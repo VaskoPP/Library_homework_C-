@@ -18,14 +18,13 @@ int main() {
     if (lib.loanBook("ISBN-001", "M001", "2025-11-03", "2025-11-17"))
         cout << "Loan created.\n";
 
-    cout << "Available ISBN-001? " << boolalpha
-         << lib.isBookAvailable("ISBN-001") << "\n";
+    cout << "Available ISBN-001? " << boolalpha << lib.isBookAvailable("ISBN-001") << "\n";
 
     lib.returnBook("ISBN-001", "M001");
 
-    cout << "Available ISBN-001? " << boolalpha
-         << lib.isBookAvailable("ISBN-001") << "\n";
+    cout << "Available ISBN-001? " << boolalpha << lib.isBookAvailable("ISBN-001") << "\n\n";
 
+    cout << "Books by Vazov:\n";
     for (const auto& bk : lib.findByAuthor("Vazov"))
-        cout << bk.to_string() << "\n";
+        cout << "  - " << bk.to_string() << "\n";
 }
