@@ -38,8 +38,8 @@ library/
 Влезте в директорията на проекта и изпълнете:
 
 ```
-g++ -std=c++17 -Wall -Wextra -O2 main.cpp -o library
-./library
+g++ -std=c++17 main.cpp -o main
+./main
 ```
 
 Тъй като проектът е **header-only**, няма нужда от компилиране на отделни .cpp файлове.
